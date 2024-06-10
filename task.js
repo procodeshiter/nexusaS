@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "https://t.me/ENXcoinn",
     "https://t.me/https://Brutaltrip",
     "https://t.me/Aemulo",
-   "tiktok.com/@user6219268422012",
+   "https://vt.tiktok.com/ZSYSVFWH4/",
   ];
 
   buttons.forEach(function (button, index) {
