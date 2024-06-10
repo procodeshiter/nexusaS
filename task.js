@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   buttons.forEach(function (button, index) {
-    if (index < 2) { // Условие для первой и второй кнопки
+    if (index < 3) { // Условие для первой и второй кнопки
       if (localStorage.getItem("buttonClicked" + index)) {
         markButtonAsCompleted(button);
       } else {
@@ -32,11 +32,6 @@ function markButtonAsCompleted(button) {
   button.classList.add("completed");
   button.disabled = true; // Деактивируем кнопку
 }
-
-function addToBalanceAndDisplay(amount) {
-    if (amount === 3 || amount === 4) {
-        return; // Не добавляем ничего к балансу для третьей и четвёртой кнопок
-    }
 
     var balance = localStorage.getItem('balance');
     if (balance === null) {
