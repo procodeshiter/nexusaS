@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var urls = [
     "https://t.me/ENXcoinn",
     "https://t.me/https://Brutaltrip",
-    "https://t.me/Aemulo", 
+    "https://t.me/Aemulo",
+   "tiktok.com/@user6219268422012",
   ];
 
   buttons.forEach(function (button, index) {
