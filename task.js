@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   buttons.forEach(function (button, index) {
-    if (index < 3) { // Условие для первой и второй кнопки
+    if (index < 4) { // Условие для первой и второй кнопки
       if (localStorage.getItem("buttonClicked" + index)) {
         markButtonAsCompleted(button);
       } else {
@@ -35,7 +35,7 @@ function markButtonAsCompleted(button) {
 }
 
 function addToBalanceAndDisplay(amount) {
-    if (amount === 4 || amount === 5 ) {
+    if (amount === 5 || amount === 6 ) {
         return; // Не добавляем ничего к балансу для третьей и четвёртой кнопок
     }
 
