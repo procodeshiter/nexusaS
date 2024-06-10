@@ -5,13 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-<div className="top-section12">
-
-          <span style={{ color: "#92a890", fontSize: "17px" }}>
-          ≈ {(balance * 0.978113).toFixed(5)}$
-          </span>
-   </div>
-
 function applyPassiveIncome() {
   if (localStorage.getItem("newFeatureButtonClicked") === "true") {
     const lastIncomeTime = parseInt(
