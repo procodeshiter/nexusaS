@@ -190,7 +190,7 @@ body {
   .progress-bar-container {
     height: 10px;
     border-radius: 5px;
-    bottom: -20px;
+    bottom: -40px;
     touch-action: none;
   }
 }
