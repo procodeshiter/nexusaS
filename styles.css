@@ -168,7 +168,7 @@ body {
   width: 70%;
   height: 10px;
   background-color: #111;
-  border-radius: 15px;
+  border-radius: 11px;
   overflow: hidden;
   margin: 0 auto;
   z-index: 999;
@@ -176,11 +176,11 @@ body {
 }
 
 .progress-bar {
-  height: 50%;
-  width: 50%;
+  height: 30%;
+  width: 30%;
   background-color: #0f0;
   border-radius: 10px 0 0 10px;
-  animation: progress-animation 10s linear;
+  animation: progress-animation 20s linear;
   box-shadow: 0 0 15px #0f0, 0 0 15px #0f0 inset;
   animation-fill-mode: forwards;
   animation-play-state: paused;
