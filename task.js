@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     "https://t.me/Aemulo",
    "https://youtube.com/shorts/Cf9nSM4zQKU?si=OuEv9AXrSXSvUKxP",
     "https://www.bybit.com/en/invite/?ref=PVA906Q&yclid=5802598652387786751",
+    "https://t.me/WhypedaProject",
   ];
 
   buttons.forEach(function (button, index) {
-    if (index < 5) { // Условие для первой и второй кнопки
+    if (index < 6) { // Условие для первой и второй кнопки
       if (localStorage.getItem("buttonClicked" + index)) {
         markButtonAsCompleted(button);
       } else {
@@ -36,7 +37,7 @@ function markButtonAsCompleted(button) {
 }
 
 function addToBalanceAndDisplay(amount) {
-    if (amount === 6 || amount === 7 ) {
+    if (amount === 7 || amount === 8 ) {
         return; // Не добавляем ничего к балансу для третьей и четвёртой кнопок
     }
 
