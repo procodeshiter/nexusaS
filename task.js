@@ -33,6 +33,11 @@ function markButtonAsCompleted(button) {
   button.disabled = true; // Деактивируем кнопку
 }
 
+function addToBalanceAndDisplay(amount) {
+    if (amount === 4 || amount === 5) {
+        return; // Не добавляем ничего к балансу для третьей и четвёртой кнопок
+    }
+
     var balance = localStorage.getItem('balance');
     if (balance === null) {
         balance = 0;
