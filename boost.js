@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
       checkButtonsStateAndShowNewFeatureButton();
     } else {
       // Если у пользователя недостаточно средств, выводим сообщение или предпринимаем другие действия
-      alert("Недостаточно BRUTALCOINS");
+      alert("Недостаточно ENX");
     }
   });
 });
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Перенаправляем пользователя на страницу index.html
         window.location.href = "index.html";
       } else {
-        alert("Недостаточно BRUTALCOINS");
+        alert("Недостаточно ENX");
       }
     });
   }
