@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Перенаправляем пользователя на страницу index.html
         window.location.href = "index.html";
       } else {
-        alert("Недостаточно BRUTALCOINS");
+        alert("Недостаточно ENX");
       }
     });
   }
