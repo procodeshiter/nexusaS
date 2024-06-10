@@ -35,7 +35,7 @@ function markButtonAsCompleted(button) {
 }
 
 function addToBalanceAndDisplay(amount) {
-    if (amount === 5 || amount === 5) {
+    if (amount ===  || amount === ) {
         return; // Не добавляем ничего к балансу для третьей и четвёртой кнопок
     }
 
