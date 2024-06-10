@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Rubik", sans-serif;
+ touch-action: none; /* Отключаем свайп на сенсорных устройствах */
 }
 
 .back-button-container {
