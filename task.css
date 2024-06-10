@@ -1,0 +1,180 @@
+﻿
+
+body {
+  background: linear-gradient(125deg, #000000 0%, hwb(0 0% 100%) 100%);
+  @import url("../css2-10")
+    color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Занимает всю высоту видимой области */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  touch-action: manipulation;
+}
+
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: hwb(0 100% 0% / 0.091);
+  color: #ffffff46; /* Цвет текста */
+  padding: 10px 25px; /* Внутренние отступы */
+  text-decoration: none; /* Убираем подчеркивание текста */
+  border-radius: 15px; /* Скругляем углы */
+  font-family: "Poppins", sans-serif; /* Шрифт */
+  transition: background-color 0.3s ease; /* Анимация фона */
+  font-size: 14px;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+
+.task-heading {
+    font-size: 3em;
+    animation: fadeIn 2.5s ease-out;
+    margin-top: 20px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.square-block {
+    width: 320px; /* Немного увеличиваем ширину блока */
+    height: 100px;
+    background-color: #f5efef23; /* Прозрачный белый фон */
+    border: 2px solid hwb(0 0% 100% / 0.034); /* Цвет рамки блока */
+    border-radius: 10px; /* Закругленные углы блока */
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 999;
+}
+
+.square-block img {
+    width: 50px; /* Ширина изображения */
+    margin-left: 10px; /* Отступ слева */
+}
+
+.square-block .text-container {
+    padding: 20px;
+    text-align: center;
+    
+}  
+
+.task-heading {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-family: "Rubik", sans-serif;
+}
+
+
+.square-block .main-text {
+    font-size: 11px;
+    color: rgb(156, 163, 100);
+}
+
+.square-block .sub-text {
+    font-size: 14px;
+    color: hwb(0 94% 6% / 0.706);
+    font-family: "Rubik", sans-serif;
+}
+.square-block.inactive {
+    background-color: #7575750e; /* Серый цвет фона для неактивной кнопки */
+    pointer-events: none; /* Убираем возможность взаимодействия */
+    cursor: default; /* Курсор по умолчанию, чтобы не показывать, что можно нажать */
+}
+
+.footer-text {
+    position: fixed; /* Фиксируем элемент */
+    bottom: 20px; /* Отступ снизу */
+    left: 50%; /* Позиционируем по центру горизонтально */
+    transform: translateX(-35%); /* Сдвигаем влево на половину ширины элемента */
+    color: #ffffff36; /* Цвет текста */
+    font-size: 11px; /* Размер шрифта */
+    font-family: "Rubik", sans-serif; /* Шрифт */
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Базовые стили для звезд */
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Анимация для звезд */
+@keyframes fly {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-end));
+    opacity: 0;
+  }
+}
+
+
+.completed {
+  background-color: hsla(
+    122,
+    39%,
+    49%,
+    0.123
+  ); /* Зеленый фон для выполненной задачи */
+  pointer-events: none; /* Убираем возможность взаимодействия */
+  color: white; /* Белый текст */
+}
+
+.completed-text {
+  font-size: 20px; /* Увеличиваем размер текста */
+  font-weight: bold; /* Жирное написание */
+  text-align: center; /* Выравнивание текста по центру */
+  width: 100%; /* Занимаем всю ширину кнопки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Занимаем всю высоту кнопки */
+}
+
+
+
+
+
+
+
+
+
+
+
+

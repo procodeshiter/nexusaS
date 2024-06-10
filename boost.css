@@ -1,0 +1,255 @@
+﻿/* Импорт шрифта */
+@import url("../css2");
+@import url("../css2-1");
+
+/* Общие стили для страницы */
+body {
+  font-family: "Konkhmer Sleokchher", system-ui;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* Градиентный фон с анимацией переливания */
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, #000000 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  touch-action: manipulation;
+}
+
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: hwb(0 100% 0% / 0.091);
+  color: #ffffff46; /* Цвет текста */
+  padding: 10px 25px; /* Внутренние отступы */
+  text-decoration: none; /* Убираем подчеркивание текста */
+  border-radius: 15px; /* Скругляем углы */
+  font-family: "Poppins", sans-serif; /* Шрифт */
+  transition: background-color 0.3s ease; /* Анимация фона */
+  font-size: 14px;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Стили для заголовка */
+.boost-title {
+  font-size: 36px;
+  margin-top: 60px;
+  color: #ffffffd0;
+}
+
+/* Стили для кнопки "Назад" */
+#backButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  width: 70px;
+  height: 30px;
+}
+
+/* Стили для контейнера с кнопками */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -20px;
+  margin-bottom: 20px; /* Добавлен нижний отступ */
+}
+
+/* Стили для текста в контейнере с кнопками */
+.buttons-container p {
+  font-size: 20px;
+}
+
+/* Стили для заголовка в контейнере с кнопками */
+.buttons-container h6 {
+  font-size: 13px;
+}
+
+/* Общие стили для кнопок */
+.boost-button {
+  background-color: rgba(128, 128, 128, 0.5);
+  border: none;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  height: 110px;
+  margin-top: 10px;
+  border-radius: 10px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+/* Стили для кнопки при наведении */
+.boost-button:hover {
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+/* Дополнительные стили для кнопки "Get profit" */
+.boost-profit p {
+  font-size: 20px;
+}
+
+.boost-profit h6 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.buttons-container button {
+  background-color: #4dad5031; /* Зеленый цвет */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* Стили для маленьких подписей */
+.buttons-container button span {
+  font-size: 12px;
+  color: hsl(0, 0%, 100%); /* Цвет текста серый */
+  display: block;
+}
+/* Стили для текста в нижней части страницы */
+.footer {
+  position: absolute;
+  bottom: 1px;
+  font-size: 12px;
+  color: white;
+}
+
+.footer a {
+  color: white; /* Цвет ссылки */
+  text-decoration: underline; /* Подчеркивание ссылки */
+}
+
+.center-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Прозрачный фон */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.center-block:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Немного уменьшаем прозрачность при наведении */
+}
+
+.center-block img {
+  height: 64px; /* Размер вашего изображения справа */
+  margin-left: 20px; /* Отступ слева от текста до изображения */
+}
+
+.center-block p {
+  margin: 0;
+  font-size: 15px; /* Размер крупного текста */
+  color: #16d13f; /* Цвет текста */
+  font-family: Poppins, sans-serif;
+}
+
+.center-block span {
+  display: block;
+  font-size: 12px; /* Размер меньшего текста под крупным */
+  color: white; /* Цвет текста */
+  font-family: Poppins, sans-serif;
+}
+
+#newImageChangeButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+  background-color: rgba(255, 255, 255, 0.1); /* Прозрачный фон */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.skinops {
+  margin-top: -20px;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Базовые стили для звезд */
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Анимация для звезд */
+@keyframes fly {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-end));
+    opacity: 0;
+  }
+}
+
+.purchased {
+  background-color: #808080; /* Серый цвет для фона */
+  color: white; /* Белый цвет текста */
+  cursor: not-allowed; /* Курсор в виде знака запрета */
+}

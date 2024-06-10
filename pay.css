@@ -1,0 +1,292 @@
+﻿@import url("../css2-16");
+@import url("../css2-17");
+
+body {
+  background: radial-gradient(circle at center, #000000, black);
+  background-size: 400% 400%;
+  font-family: Poppins;
+  color: white;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch; /* Убираем оверскролл для iOS */
+  touch-action: none; /* Отключаем свайп на сенсорных устройствах */
+}
+
+html,
+body {
+  overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+}
+
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: hwb(0 100% 0% / 0.091);
+  color: #ffffff46;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.top-text {
+  position: absolute;
+  top: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.centered-top-image {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  height: auto;
+}
+
+.balance-display {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #d8d50a;
+  width: 100%;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  font-family: "Konkhmer Sleokchher", system-ui;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  padding-top: 50px;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  position: relative;
+  top: -50px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-button {
+  width: 90%;
+  max-width: 150px;
+  height: 40px;
+  font-size: 16px;
+  background-color: rgb(77, 156, 2);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  top: -50px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-image {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 20%;
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .centered-image {
+    max-width: 50%;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-image {
+    max-width: 50%;
+    bottom: 10px;
+  }
+}
+
+.refresh-text {
+  color: #ffffff19;
+  font-size: 8px;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.balance-image {
+  display: block;
+  max-width: 10%;
+  left: 25px;
+  height: auto;
+  margin-top: 230px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .balance-image {
+    max-width: 90%;
+  }
+}
+
+/* Базовые стили для звезд */
+.star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Анимация для звезд */
+@keyframes fly {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-end));
+    opacity: 0;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Контейнер займет всю ширину */
+  height: auto; /* Высота контейнера будет определяться содержимым */
+  padding: 10px; /* Добавляет небольшой отступ вокруг изображения */
+}
+
+.responsive-image {
+  max-width: 100%; /* Изображение никогда не будет шире своего контейнера */
+  height: auto; /* Сохранение пропорций изображения */
+}
+
+/* Адаптация изображения к размеру экрана */
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 50%; /* Немного уменьшаем изображение на меньших экранах */
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-image {
+    width: 80%; /* Изображение занимает большую часть экрана на совсем маленьких устройствах */
+  }
+}
+
+.progress-container {
+  width: 80%; /* или любой другой размер, который вам нужен */
+  background-color: #000; /* Фон контейнера, будет виден за незаполненной частью прогресс-бара */
+  border: 2px solid #00bfff; /* Неоновая рамка вокруг контейнера */
+  border-radius: 5px;
+  margin: 20px auto; /* Центрирование и добавление отступа сверху */
+  position: relative;
+  overflow: hidden; /* Важно для сохранения рамки внутри контейнера */
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: hwb(240 30% 32% / 0.367); /* Цвет заливки прогресса */
+  width: 0; /* Начальная ширина */
+  border-radius: 5px;
+  color: white; /* Цвет текста */
+  line-height: 20px; /* Высота строки для вертикального центрирования текста */
+  text-align: center; /* Текст выравнивается по центру */
+  position: relative;
+}
+
+/* Неоновый эффект для рамки */
+.progress-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 5px;
+  z-index: -1;
+  background: black;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.75),
+    /* Неоновый свет внутри */ 0 0 20px rgba(0, 255, 255, 0.75),
+    /* Неоновый свет снаружи */ 0 0 30px rgba(0, 255, 255, 0.75),
+    /* Расширенный неоновый свет снаружи */ 0 0 40px rgba(0, 255, 255, 0.75); /* Дополнительный неоновый свет снаружи */
+  animation: neonBorderGlow 2s ease-in-out infinite alternate;
+}
+
+.progress-bar::after {
+  content: attr(data-progress); /* Используйте атрибут для отображения текста */
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Цвет текста будет белым */
+  height: 100%;
+  line-height: 20px; /* Высота строки такая же, как у прогресс-бара */
+}
+
+@keyframes neonBorderGlow {
+  from {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.75),
+      0 0 10px rgba(0, 255, 255, 0.75), 0 0 15px rgba(0, 255, 255, 0.75),
+      0 0 20px rgba(0, 255, 255, 0), 0 0 25px rgba(0, 255, 255, 0),
+      0 0 30px rgba(0, 255, 255, 0), 0 0 35px rgba(0, 255, 255, 0);
+  }
+  to {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0), 0 0 10px rgba(0, 255, 255, 0),
+      0 0 15px rgba(0, 255, 255, 0), 0 0 20px rgba(0, 255, 255, 0.75),
+      0 0 25px rgba(0, 255, 255, 0.75), 0 0 30px rgba(0, 255, 255, 0.75),
+      0 0 35px rgba(0, 255, 255, 0.75);
+  }
+}
+
+/* Адаптация для меньших экранов */
+@media (max-width: 768px) {
+  .progress-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-container {
+    width: 65%;
+    bottom: 45px; /* Расстояние от верха страницы */
+  }
+}

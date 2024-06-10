@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Мета-теги -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
+    <title>Boost</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="boost.css">
+  </head>
+  <body>
+    <div class="back-button-container">
+      <a href="index.html" class="back-button">< Назад</a>
+    </div>
+
+    <!-- Заголовок страницы -->
+    <h1 class="boost-title">🔋</h1>
+
+    <!-- Контейнер для кнопок -->
+    <div class="buttons-container">
+      <!-- Кнопка увеличения монет -->
+      <button class="center-block" id="coinsButton">
+        <p>🪙 Удвоение добычи</p>
+        <span>10.00 ENX</span>
+        <!-- Маленькая подпись -->
+      </button>
+
+      <!-- Кнопка увеличения скорости -->
+      <button class="center-block" id="speedButton">
+        <p>⏱ Ускорение добычи</p>
+        <span>5.00 ENX</span>
+        <!-- Маленькая подпись -->
+      </button>
+
+      <!-- Новая кнопка после покупки -->
+      <button class="center-block" id="newFeatureButton" style="display: none">
+        <p>Auto mining 🤖</p>
+        <span>20.00 ENX</span>
+        <!-- Маленькая подпись -->
+      </button>
+
+      <!-- Кнопка получения прибыли -->
+      <button class="center-block speed-limit" id="profitButton">
+        <p>🎁 Бесплатные монеты</p>
+        <span>0.50 ENX каждые 3 часа</span>
+        <!-- Маленькая подпись -->
+      </button>
+    </div>
+
+    <div class="skinops">
+      <p>🌗</p>
+    </div>
+
+
+    <button class="center-block" id="newImageChangeButton">
+      <div>
+        <p>Exclusive EnxPlay skin</p>
+        <span>25.00 ENX</span>
+      </div>
+      <img src="dog.png" alt="Иконка нового скина">
+    </button>
+
+    <!-- Контейнер для отображения сообщения -->
+    <div id="messageContainer" style="display: none"></div>
+
+    <!-- Подключение скриптов -->
+    <script src="boost.js"></script>
+  </body>
+</html>

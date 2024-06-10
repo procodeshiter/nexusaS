@@ -1,0 +1,81 @@
+﻿    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Мета-теги -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Заголовок страницы -->
+        <title>Добыча</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body> 
+
+
+        <div id="loadingScreen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 9999; background-size: cover; background-position: center;">
+    <h2 style="color: white;">ENX</h2>
+    <p id="loadingText" style="color: white;">Загрузка... 0%</p>
+</div>
+
+
+        <div id="waitMessage" class="hidden">Подождите..</div>
+
+        <div class="balance-wrapper">
+            <!-- Контейнер изображения -->
+            <div class="balance-image-container">
+                <!-- Изображение -->
+                <img src="tether.png" alt="Маленькое изображение" class="balance-image">
+            </div>
+        <!-- Контейнер для баланса -->
+        <div class="balance-container">
+            <p>0</p>
+        </div>
+<div class="top-section12"><span style="color: rgb(146, 168, 144); font-size: 17px;">≈ 0.0$</span></div>
+    
+              <div id="promoBlock">
+        <img src="fire.gif" alt="Промо">
+        <div class="promoText">
+            <h4>AIRDROP</h4>
+        </div>
+    </div>
+
+        <!-- Основной контейнер -->
+        <div class="centered-container">
+            <!-- Изображение -->
+            <div class="centered-image">
+                <img src="photo_2024-03-28_23-01-05-transformed.PNG" alt="Ваше изображение">
+            </div>
+<!-- Меню -->
+<div class="menu-container">
+    <!-- Кнопки меню -->
+    <div class="menu-button image1">
+        🎒
+        <span class="menu-label">Claim</span>
+    </div>
+    <div class="divider"></div>
+    <div class="menu-button image2">
+        🔋
+        <span class="menu-label">Boost</span>
+    </div>
+    <div class="divider"></div>
+    <div class="menu-button image3">
+        📮
+        <span class="menu-label">Tasks</span>
+    </div>
+</div> 
+
+        <!-- Контейнер для прогресс-бара (изначально скрыт) -->
+  <div class="progress-bar-container hidden">
+            <div class="progress-bar"></div>
+        </div>
+
+
+        
+
+        <!-- Подключение скриптов -->
+        <script src="main.js"></script>
+        <script src="../js/telegram-web-app.js"></script>
+
+         
+    </div></div></body>
+    </html>

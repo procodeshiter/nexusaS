@@ -1,0 +1,479 @@
+﻿/* Импорт шрифта */
+@import url("../css2");
+@import url("../css2-1");
+@import url("../css2-2");
+@import url("../css2-3");
+body {
+  background: radial-gradient(circle at center, rgb(40, 40, 36), black);
+
+  font-family: "Konkhmer Sleokchher", system-ui;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  touch-action: none;
+}
+
+#loadingScreen {
+  background: radial-gradient(circle at center, #000000, black);
+  background-size: cover;
+  background-position: center;
+  font-family: "Press Start 2P", system-ui;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#loadingText {
+  animation: blink 1s infinite;
+  color: white; /* Или любой цвет, который будет хорошо виден на вашем изображении */
+  font-family: "Konkhmer Sleokchher", system-ui;
+}
+
+html,
+body {
+  overflow: hidden;
+  touch-action: none;
+}
+
+#promoBlock {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  width: 55px; /* Или любой другой размер, который вам нужен */
+  height: 55px; /* Для сохранения квадратной формы */
+  color: hwb(0 100% 0%); /* Цвет текста */
+  cursor: pointer;
+  display: flex;
+  background-color: #ffffff0b;
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#promoBlock img {
+  max-width: 100%;
+  max-height: 100%; /* Ограничение размера изображения */
+  margin-top: -8px;
+}
+
+.promoText {
+  text-align: center;
+  margin-top: -3px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 10px;
+}
+
+.promoText h4,
+.promoText p {
+  margin: 0px 0; /* Отступы для текста */
+}
+
+.balance-image-container {
+  display: inline-block;
+  vertical-align: middle;
+  touch-action: none;
+}
+
+.balance-image {
+  width: 50px;
+  height: auto;
+  touch-action: none;
+}
+
+.centered-container {
+  text-align: center;
+  touch-action: none;
+}
+
+.centered-image {
+  display: inline-block;
+  margin-bottom: 0px;
+  touch-action: none;
+}
+
+.centered-image img {
+  max-width: 50%;
+  max-height: 50%;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  touch-action: none;
+}
+
+@media (max-width: 768px) {
+  .centered-image img {
+    margin-top: -20px;
+    max-width: 100%;
+    max-height: auto;
+    touch-action: none;
+  }
+}
+
+.rounded-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: blue;
+  text-decoration: none;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.button-text {
+  color: white;
+  font-weight: bold;
+  touch-action: none;
+}
+
+.shake-image {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.progress-bar-container {
+  position: centre;
+
+  bottom: 20px;
+  width: 70%;
+  height: 10px;
+  background-color: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 999;
+  touch-action: none;
+}
+
+.progress-bar {
+  height: 50%;
+  width: 50%;
+  background-color: #0f0;
+  border-radius: 10px 0 0 10px;
+  animation: progress-animation 10s linear;
+  box-shadow: 0 0 15px #0f0, 0 0 15px #0f0 inset;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  touch-action: none;
+}
+
+@media screen and (max-width: 480px) {
+  .progress-bar-container {
+    height: 10px;
+    border-radius: 5px;
+    bottom: -20px;
+    touch-action: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .progress-bar-container {
+    height: 15px;
+    border-radius: 7px;
+    bottom: 15px;
+    touch-action: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .progress-bar-container {
+    height: 20px;
+    border-radius: 10px;
+    bottom: 20px;
+    touch-action: none;
+  }
+}
+
+
+@keyframes progress-animation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.hidden {
+  display: none;
+  touch-action: none;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  touch-action: none;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  touch-action: none;
+}
+
+.menu-button {
+  padding: 30px 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Добавлено значение justify-content */
+  flex-shrink: 0;
+  touch-action: none;
+}
+
+.menu-button {
+  position: relative;
+  touch-action: none;
+}
+
+.menu-label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  white-space: nowrap;
+  touch-action: none;
+}
+
+@media screen and (max-width: 480px) {
+  .menu-label {
+    font-size: 0.6em;
+    touch-action: none;
+  }
+}
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  touch-action: none;
+}
+
+.menu-button {
+  padding: 30px 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  touch-action: none;
+}
+
+@import url("../css2-4");
+
+.menu-label {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  white-space: nowrap;
+  color: hsla(0, 0%, 100%, 0.367);
+  touch-action: none;
+}
+
+/* Стили для разделителей */
+.menu-button:not(:last-child)::after {
+  content: "";
+  height: 50%;
+  width: 1px;
+  background-color: #ffffff0e;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  touch-action: none;
+}
+
+.menu-button:not(:last-child) {
+  border-right: 2px solid transparent;
+  touch-action: none;
+}
+
+.menu-button:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  touch-action: none;
+}
+
+.menu-button:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  touch-action: none;
+}
+
+.balance-container {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2rem;
+  margin-left: 0px;
+  padding-right: 10px;
+  color: #ffffffea;
+  touch-action: none;
+}
+
+.balance-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+
+@media screen and (max-width: 480px) {
+  .balance-image {
+    width: 60px;
+    padding-top: 7px;
+    padding-right: 10px;
+    margin-left: -50px;
+    touch-action: none;
+  }
+  .balance-container {
+    font-size: 2.3rem;
+    touch-action: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .balance-image {
+    width: 40px;
+    touch-action: none;
+  }
+  .balance-container {
+    font-size: 1.75rem;
+    touch-action: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .balance-image {
+    width: 50px;
+    touch-action: none;
+  }
+  .balance-container {
+    font-size: 2rem;
+    touch-action: none;
+  }
+}
+
+.balance-container p {
+  margin: -15px;
+  touch-action: none;
+}
+
+.balance-wrapper {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  touch-action: none;
+}
+
+@keyframes squeeze {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.squeeze-animation {
+  animation: squeeze 0.5s ease;
+}
+
+#waitMessage {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  color: hwb(0 100% 0% / 0.118);
+  z-index: 1000;
+  display: none;
+  touch-action: none;
+}
+
+.tap-image {
+  opacity: 0.5; /* Делаем изображения прозрачными */
+  width: 50px; /* Установите нужные вам размеры изображений */
+  height: auto; /* Автоматический подбор высоты */
+  position: absolute;
+  z-index: 9999; /* Устанавливаем высокий z-index, чтобы изображения были поверх других элементов */
+  touch-action: none;
+}
+
+@keyframes flyUp {
+  0% {
+    opacity: 0.5;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
