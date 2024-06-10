@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var urls = [
     "https://t.me/ENXcoinn",
     "https://t.me/https://Brutaltrip",
+    "", 
   ];
 
   buttons.forEach(function (button, index) {
