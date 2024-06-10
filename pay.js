@@ -1,33 +1,3 @@
-// Получаем последнее сохраненное значение баланса из localStorage
-var lastBalance = localStorage.getItem("balance");
-if (lastBalance === null) {
-  // Если значение не найдено, устанавливаем значение по умолчанию
-  lastBalance = 0;
-} else {
-  // Преобразуем строку в число
-  lastBalance = parseFloat(lastBalance);
-}
-
-// Получаем элемент .container
-var container = document.querySelector(".container");
-
-// Создаем новый элемент для отображения баланса
-var balanceDisplay = document.createElement("p");
-balanceDisplay.classList.add("balance-display");
-
-// Создаем элемент <img> для изображения
-var balanceImage = document.createElement("img");
-balanceImage.alt = "Balance Image"; // Добавьте атрибут alt для доступности
-balanceImage.classList.add("balance-image"); // Добавляем класс для стилей
-
-// Вставляем изображение внутрь элемента balanceDisplay
-balanceDisplay.appendChild(balanceImage);
-
-// Устанавливаем текст для баланса
-balanceDisplay.textContent = lastBalance.toFixed(5); // Отображаем баланс
-
-// Вставляем новый элемент перед .container
-container.insertAdjacentElement("beforebegin", balanceDisplay);
 
 function createStar() {
   const star = document.createElement("div");
