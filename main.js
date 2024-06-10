@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+<div className="top-section12">
+
+          <span style={{ color: "#92a890", fontSize: "17px" }}>
+          ≈ {(balance * 0.978113).toFixed(5)}$
+          </span>
+   </div>
+
 function applyPassiveIncome() {
   if (localStorage.getItem("newFeatureButtonClicked") === "true") {
     const lastIncomeTime = parseInt(
@@ -23,9 +30,11 @@ function applyPassiveIncome() {
       localStorage.setItem("balance", newBalance.toString());
       localStorage.setItem("passiveIncomeStarted", updatedTime.toString());
 
+
+      
       // Запланировать показ алерта через 3 секунды
       setTimeout(() => {
-        alert(`🤖 заработал ${income.toFixed(4)} $MELL`);
+        alert(`🤖 заработал ${income.toFixed(4)} $ENX`);
       }, 3000);
     }
   }
