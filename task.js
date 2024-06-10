@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   buttons.forEach(function (button, index) {
-    if (index < 4) { // Условие для первой и второй кнопки
+    if (index < 3) { // Условие для первой и второй кнопки
       if (localStorage.getItem("buttonClicked" + index)) {
         markButtonAsCompleted(button);
       } else {
